@@ -14,21 +14,34 @@ for more info regarding list comprehensions.
 
 # Write a list comprehension to produce the array [1, 2, 3, 4, 5]
 # Your code here
-
+y = [n for n in range(6) if n != 0]
+print(y)
 
 # Write a list comprehension to produce the cubes of the numbers 0-9:
 # [0, 1, 8, 27, 64, 125, 216, 343, 512, 729]
-# Your code here
-
+cubed_nums = [n**3 for n in range(10)]
+print(cubed_nums)
 
 # Write a list comprehension to produce the uppercase version of all the
 # elements in array a. Hint: "foo".upper() is "FOO".
 a = ["foo", "bar", "baz"]
-# Your code here
+a = [s.upper() for s in a]
+print(a)
 
 
 # Use a list comprehension to create a list containing only the _even_ elements
 # the user entered into list x.
 x = input("Enter comma-separated numbers: ").split(',')
-# Your code here
+
+# evens = [n.astype('int') for n in x if n % 2 == 0]
+# print(evens)
+evens = []
+for n in x:
+    # loop through these numbers 
+    # check if they're even 
+    # if they are, add it to our list 
+    n= int(n)
+    if n % 2 == 0:
+        evens.append(n)
+print(evens)
 
